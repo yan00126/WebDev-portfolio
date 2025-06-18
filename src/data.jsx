@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
-import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -26,6 +27,18 @@ export const skills = [
     title: "React",
     icon: <FaReact className="h-16 w-16 text-emerald-500" />,
     text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+  },
+  {
+    id: nanoid(),
+    title: "Next.JS",
+    icon: <SiNextdotjs className="h-16 w-16 text-emerald-500" />,
+    text: "Experienced in building web applications with Next.js, using its server-side rendering, routing, and API features to create fast and reliable user experiences. Comfortable working with Next.js to develop both simple and complex projects, focusing on maintainable code and efficient performance.",
+  },
+  {
+    id: nanoid(),
+    title: "Python",
+    icon: <FaPython className="h-16 w-16 text-emerald-500" />,
+    text: "Skilled in Python, using its clear syntax and versatility for web development, automation, and data analysis.",
   },
 ];
 
