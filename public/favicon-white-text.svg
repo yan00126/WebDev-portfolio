@@ -2,5 +2,5 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="#1877F2"/>
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Arial, sans-serif" font-size="28" fill="#000000" font-weight="bold">FY</text>
+        font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" font-weight="bold">FY</text>
 </svg>

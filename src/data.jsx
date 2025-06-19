@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiMysql } from "react-icons/si";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -40,6 +40,12 @@ export const skills = [
     icon: <FaPython className="h-16 w-16 text-emerald-500" />,
     text: "Skilled in Python, using its clear syntax and versatility for web development, automation, and data analysis.",
   },
+  {
+    id: nanoid(),
+    title: "MySql",
+    icon: <SiMysql className="h-16 w-16 text-emerald-500" />,
+    text: "Experienced in using MySQL for managing relational databases, including designing schemas, writing SQL queries, and integrating MySQL with Python applications using the mysql-connector-python package. Skilled in establishing secure connections, handling data operations, and ensuring efficient data retrieval and storage",
+  },
 ];
 
 export const projects = [
@@ -48,7 +54,7 @@ export const projects = [
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://felixyan-backroads.netlify.app/",
     github: "https://github.com/yan00126",
-    title: "first project",
+    title: "mock travel site homepage backroads app",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
   {
@@ -56,7 +62,7 @@ export const projects = [
     img: "https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://unsplashfelix.netlify.app/",
     github: "https://github.com/yan00126",
-    title: "second project",
+    title: "picture search",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
   {
