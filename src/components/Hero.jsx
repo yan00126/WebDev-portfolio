@@ -21,9 +21,6 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/fei-yan-86331a45/">
               <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
-            <a href="https://x.com/felixPEKING">
-              <FaSquareXTwitter className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
-            </a>
           </div>
         </article>
         <article className="hidden md:block">
