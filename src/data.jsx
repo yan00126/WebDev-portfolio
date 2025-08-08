@@ -52,6 +52,14 @@ export const projects = [
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
+    url: "https://mealmate-felix-yan.vercel.app/",
+    github: "https://github.com/yan00126",
+    title: "Meal Mate",
+    text: "Welcome to MealMate — your go-to companion for seamless meal planning and personalized recipe creation. Whether you’re organizing your weekly dinners, trying out new dishes, or balancing nutrition with convenience, MealMate streamlines the process with ease.",
+  },
+  {
+    id: nanoid(),
+    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://felixyan-backroads.netlify.app/",
     github: "https://github.com/yan00126",
     title: "mock travel site homepage backroads app",
@@ -63,14 +71,6 @@ export const projects = [
     url: "https://unsplashfelix.netlify.app/",
     github: "https://github.com/yan00126",
     title: "picture search",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
-  },
-  {
-    id: nanoid(),
-    img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://unsplashfelix.netlify.app/",
-    github: "https://github.com/yan00126",
-    title: "third project",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
 ];
