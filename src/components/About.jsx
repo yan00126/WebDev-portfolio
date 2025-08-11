@@ -11,10 +11,10 @@ const About = () => {
         <article>
           <SectionTitle text="code, coffee, running and fighting" />
           <p className="text-slate-600 mt-8 leading-loose">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            saepe quas aliquid assumenda molestias. Veniam magni facere non
-            soluta sed eveniet deleniti voluptas, recusandae provident
-            asperiores in blanditiis dolore culpa.
+            My name is Fei Yan, and I am currently a software engineering
+            student at Algonquin College, where I'm focusing on web development
+            and internet applications. I am passionate about exploring
+            artificial intelligence (AI) and its real-world applications.
           </p>
         </article>
 
