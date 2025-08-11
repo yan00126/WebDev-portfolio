@@ -51,7 +51,7 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: "https://plus.unsplash.com/premium_photo-1734112181063-4b2328276910?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1lYWwlMjBNYXRlfGVufDB8MHwwfHx8MA%3D%3D",
     url: "https://mealmate-felix-yan.vercel.app/",
     github: "https://github.com/yan00126",
     title: "Meal Mate",
@@ -63,14 +63,14 @@ export const projects = [
     url: "https://felixyan-backroads.netlify.app/",
     github: "https://github.com/yan00126",
     title: "mock travel site homepage backroads app",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
+    text: "A mock homepage for travel agency website.",
   },
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     url: "https://unsplashfelix.netlify.app/",
     github: "https://github.com/yan00126",
     title: "picture search",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
+    text: "Search Pictures of anything from Unsplash, Cats, Dogs.",
   },
 ];
