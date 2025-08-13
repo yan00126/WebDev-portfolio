@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
-import { SiNextdotjs, SiMysql } from "react-icons/si";
+import { SiNextdotjs, SiMysql, SiTypescript } from "react-icons/si";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -46,16 +46,30 @@ export const skills = [
     icon: <SiMysql className="h-16 w-16 text-emerald-500" />,
     text: "Experienced in using MySQL for managing relational databases, including designing schemas, writing SQL queries, and integrating MySQL with Python applications using the mysql-connector-python package. Skilled in establishing secure connections, handling data operations, and ensuring efficient data retrieval and storage",
   },
+  {
+    id: nanoid(),
+    title: "TypeScript",
+    icon: <SiTypescript className="h-16 w-16 text-emerald-500" />,
+    text: "TypeScript is a strongly typed programming language that builds upon JavaScript by adding optional static type definitions. ",
+  },
 ];
 
 export const projects = [
+  {
+    id: nanoid(),
+    img: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
+    url: "https://a-store-ten.vercel.app/",
+    github: "https://github.com/yan00126",
+    title: "There is A Store(Work in progress)",
+    text: "A store and it sells products",
+  },
   {
     id: nanoid(),
     img: "https://plus.unsplash.com/premium_photo-1734112181063-4b2328276910?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1lYWwlMjBNYXRlfGVufDB8MHwwfHx8MA%3D%3D",
     url: "https://mealmate-felix-yan.vercel.app/",
     github: "https://github.com/yan00126",
     title: "Meal Mate",
-    text: "Welcome to MealMate — your go-to companion for seamless meal planning and personalized recipe creation. Whether you’re organizing your weekly dinners, trying out new dishes, or balancing nutrition with convenience, MealMate streamlines the process with ease.",
+    text: "Welcome to MealMate — your go-to companion for seamless meal planning and personalized recipe creation. ",
   },
   {
     id: nanoid(),
