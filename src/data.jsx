@@ -58,10 +58,10 @@ export const projects = [
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
-    url: "https://a-store-ten.vercel.app/",
+    url: "https://template-store-umber.vercel.app/",
     github: "https://github.com/yan00126",
-    title: "There is A Store(Work in progress)",
-    text: "A store and it sells products",
+    title: "A Simple Store",
+    text: "A NextJS based online shopping website ",
   },
   {
     id: nanoid(),

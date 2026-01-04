@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { TbWorldWww } from "react-icons/tb";
