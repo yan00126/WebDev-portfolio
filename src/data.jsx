@@ -69,8 +69,8 @@ export const projects = [
     img: jobifyscreenshot,
     url: "https://template-store-umber.vercel.app/",
     github: "https://github.com/yan00126",
-    title: "A Simple Store",
-    text: "A NextJS based online shopping website ",
+    title: "Jobify",
+    text: "A NextJS based Job Application Tracking App",
   },
   {
     id: nanoid(),
