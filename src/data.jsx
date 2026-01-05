@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
 import { SiNextdotjs, SiMysql, SiTypescript } from "react-icons/si";
+import jobifyscreenshot from "@/assets/jobifyscreenshot.png";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -58,6 +59,14 @@ export const projects = [
   {
     id: nanoid(),
     img: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
+    url: "https://template-store-umber.vercel.app/",
+    github: "https://github.com/yan00126",
+    title: "A Simple Store",
+    text: "A NextJS based online shopping website ",
+  },
+  {
+    id: nanoid(),
+    img: jobifyscreenshot,
     url: "https://template-store-umber.vercel.app/",
     github: "https://github.com/yan00126",
     title: "A Simple Store",
