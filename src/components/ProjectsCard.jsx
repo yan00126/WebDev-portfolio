@@ -8,7 +8,7 @@ const ProjectsCard = ({ url, img, github, title, text }) => {
       <img
         src={img}
         alt={title}
-        className="w-full object-cover rounded-t-lg h-64"
+        className="w-full object-contain bg-slate-100 rounded-t-lg"
       />
       <div className="capitalize p-8">
         <h2 className="text-xl tracking-wide font-medium">{title}</h2>
