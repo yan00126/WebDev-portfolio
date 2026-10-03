@@ -18,11 +18,10 @@ const About = () => {
           </p>
         </article>
 
-        {/* Full-width Gradio app below the two columns */}
+        {/* Full-width portfolio chat */}
         <div className="md:col-span-2">
           <GradioEmbed
             src="https://felixpek-alterego.hf.space/?__theme=light"
-            minHeight={720}
           />
         </div>
       </div>

@@ -5,3 +5,24 @@
     @apply mx-auto max-w-7xl px-8;
   }
 }
+
+@layer components {
+  .chat-reply {
+    @apply whitespace-normal;
+  }
+  .chat-reply > * + * {
+    @apply mt-3;
+  }
+  .chat-reply ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  .chat-reply ol {
+    @apply list-decimal space-y-1 pl-5;
+  }
+  .chat-reply a {
+    @apply text-emerald-700 underline underline-offset-2;
+  }
+  .chat-reply pre {
+    @apply overflow-x-auto rounded-lg bg-slate-100 p-3;
+  }
+}
