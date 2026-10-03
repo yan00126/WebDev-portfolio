@@ -1,44 +1,23 @@
-import { useEffect, useRef } from "react";
-
-const GRADIO_SCRIPT_SRC =
-  "https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js";
-
 export default function GradioEmbed({ src, minHeight = 720 }) {
-  // In SSR environments, render nothing on the server
-  if (typeof window === "undefined") return null;
-
-  const loadedRef = useRef(false);
-
-  useEffect(() => {
-    if (loadedRef.current) return;
-    loadedRef.current = true;
-
-    // Load the script only once
-    const existing = document.querySelector(
-      `script[src="${GRADIO_SCRIPT_SRC}"]`
-    );
-    if (existing) return;
-
-    const s = document.createElement("script");
-    s.type = "module";
-    s.src = GRADIO_SCRIPT_SRC;
-    s.async = true;
-    s.crossOrigin = "anonymous";
-    document.head.appendChild(s);
-  }, []);
-
   return (
     <div className="w-full">
-      {/* Custom element provided by Gradio */}
-      <gradio-app
+      <iframe
         src={src}
-        style={{
-          display: "block",
-          width: "100%",
-          minHeight:
-            typeof minHeight === "number" ? `${minHeight}px` : minHeight,
-        }}
+        title="AlterEgo — Chat with Fei"
+        className="w-full rounded-lg border border-slate-200"
+        style={{ height: minHeight }}
       />
+      <p className="mt-3 text-sm text-slate-600">
+        The chat may take a moment to wake up. If it does not load,{' '}
+        <a
+          href={src}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-700 underline hover:text-emerald-900"
+        >
+          open AlterEgo in a new tab
+        </a>.
+      </p>
     </div>
   );
 }
