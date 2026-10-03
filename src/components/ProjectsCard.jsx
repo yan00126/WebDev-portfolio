@@ -1,24 +1,40 @@
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { TbWorldWww } from "react-icons/tb";
-
-const ProjectsCard = ({ url, img, github, title, text }) => {
+const ProjectsCard = ({ url, img, github, kind, title, text, tags }) => {
   return (
-    <article className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300">
-      <img
-        src={img}
-        alt={title}
-        className="w-full object-contain bg-slate-100 rounded-t-lg"
-      />
-      <div className="capitalize p-8">
-        <h2 className="text-xl tracking-wide font-medium">{title}</h2>
-        <p className="mt-4 text-slate-700 leading-loose">{text}</p>
-        <div className="mt-4 flex gap-x-4">
-          <a href={url}>
-            <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+    <article className="grid items-center gap-6 py-8 md:grid-cols-2 md:gap-10 md:even:[&>a]:order-2">
+      <a
+        href={url}
+        className="block overflow-hidden rounded-xl border border-line bg-surface"
+        aria-label={`Open ${title}`}
+      >
+        <div className="flex h-6 items-center gap-1.5 border-b border-line px-3">
+          <i className="h-2 w-2 rounded-full bg-line" />
+          <i className="h-2 w-2 rounded-full bg-line" />
+          <i className="h-2 w-2 rounded-full bg-line" />
+        </div>
+        <img
+          src={img}
+          alt={`${title} home page`}
+          loading="lazy"
+          className="aspect-[1326/825] w-full object-cover object-top"
+        />
+      </a>
+      <div className="min-w-0">
+        <span className="label">{kind}</span>
+        <h3 className="mb-3 mt-2 text-3xl font-bold">{title}</h3>
+        <p className="max-w-[44ch] text-muted">{text}</p>
+        <div className="my-5 flex flex-wrap gap-2">
+          {tags.map((t) => (
+            <span key={t} className="tag">
+              {t}
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-5 text-[15px] font-semibold">
+          <a href={url} className="border-b-2 border-accent pb-0.5">
+            Live site
           </a>
-          <a href={github}>
-            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+          <a href={github} className="border-b-2 border-accent pb-0.5">
+            Code
           </a>
         </div>
       </div>

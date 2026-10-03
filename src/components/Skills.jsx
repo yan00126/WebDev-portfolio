@@ -5,12 +5,12 @@ import { skills } from "../data";
 
 const Skills = () => {
   return (
-    <section className="py-20 align-element " id="skills">
-      <SectionTitle text="tech stack" />
-      <div className="py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {skills.map((skill) => {
-          return <SkillsCard key={skill.id} {...skill} />;
-        })}
+    <section className="align-element border-t border-line py-14" id="skills">
+      <SectionTitle text="Tech stack" aside="What I reach for" />
+      <div className="mt-8 grid overflow-hidden rounded-2xl border-l border-t border-line bg-surface sm:grid-cols-2 lg:grid-cols-3 [&>*]:border-r [&>*]:border-b">
+        {skills.map((skill) => (
+          <SkillsCard key={skill.id} {...skill} />
+        ))}
       </div>
     </section>
   );

@@ -1,9 +1,10 @@
 import React from "react";
 
-const SectionTitle = ({ text }) => {
+const SectionTitle = ({ text, aside }) => {
   return (
-    <div className="border-b border-gray-200 pb-5">
-      <h2 className="text-3xl font-medium tracking-wider capitalize">{text}</h2>
+    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+      <h2 className="text-4xl font-bold sm:text-5xl">{text}</h2>
+      {aside && <span className="label">{aside}</span>}
     </div>
   );
 };

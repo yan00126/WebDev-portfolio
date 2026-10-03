@@ -1,58 +1,63 @@
 import { nanoid } from "nanoid";
 import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
 import { SiNextdotjs, SiMysql, SiTypescript } from "react-icons/si";
-import jobifyscreenshot from "@/assets/jobifyscreenshot.png";
-import storeshomescreen from "@/assets/storeshomescreen.png";
+import jobifyscreenshot from "@/assets/jobifyscreenshot.webp";
+import storeshomescreen from "@/assets/storeshomescreen.webp";
+import mealmate from "@/assets/mealmate.webp";
+import backroads from "@/assets/backroads.webp";
+import picsearch from "@/assets/picsearch.webp";
 
 export const links = [
-  { id: nanoid(), href: "#home", text: "home" },
-  { id: nanoid(), href: "#about", text: "about" },
-  { id: nanoid(), href: "#skills", text: "skills" },
-  { id: nanoid(), href: "#projects", text: "projects" },
+  { id: nanoid(), href: "#projects", text: "Work" },
+  { id: nanoid(), href: "#ai-lab", text: "AI Lab" },
+  { id: nanoid(), href: "#skills", text: "Stack" },
+  { id: nanoid(), href: "#about", text: "About" },
 ];
+
+const iconClass = "h-8 w-8 text-accent";
 
 export const skills = [
   {
     id: nanoid(),
-    title: "HTML&CSS",
-    icon: <FaHtml5 className="h-16 w-16 text-emerald-500" />,
-    text: "Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.",
-  },
-  {
-    id: nanoid(),
-    title: "Javascript",
-    icon: <FaJs className="h-16 w-16 text-emerald-500" />,
-    text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
+    title: "Next.js",
+    level: "Daily",
+    icon: <SiNextdotjs className={iconClass} />,
+    text: "Server-side rendering, routing and API routes for fast, maintainable apps.",
   },
   {
     id: nanoid(),
     title: "React",
-    icon: <FaReact className="h-16 w-16 text-emerald-500" />,
-    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
-  },
-  {
-    id: nanoid(),
-    title: "Next.JS",
-    icon: <SiNextdotjs className="h-16 w-16 text-emerald-500" />,
-    text: "Experienced in building web applications with Next.js, using its server-side rendering, routing, and API features to create fast and reliable user experiences. Comfortable working with Next.js to develop both simple and complex projects, focusing on maintainable code and efficient performance.",
-  },
-  {
-    id: nanoid(),
-    title: "Python",
-    icon: <FaPython className="h-16 w-16 text-emerald-500" />,
-    text: "Skilled in Python, using its clear syntax and versatility for web development, automation, and data analysis.",
-  },
-  {
-    id: nanoid(),
-    title: "MySql",
-    icon: <SiMysql className="h-16 w-16 text-emerald-500" />,
-    text: "Experienced in using MySQL for managing relational databases, including designing schemas, writing SQL queries, and integrating MySQL with Python applications using the mysql-connector-python package. Skilled in establishing secure connections, handling data operations, and ensuring efficient data retrieval and storage",
+    level: "Daily",
+    icon: <FaReact className={iconClass} />,
+    text: "Component-based front ends with a focus on clean, reusable structure.",
   },
   {
     id: nanoid(),
     title: "TypeScript",
-    icon: <SiTypescript className="h-16 w-16 text-emerald-500" />,
-    text: "TypeScript is a strongly typed programming language that builds upon JavaScript by adding optional static type definitions. ",
+    level: "Daily",
+    icon: <SiTypescript className={iconClass} />,
+    text: "Static types on top of JavaScript to catch mistakes early.",
+  },
+  {
+    id: nanoid(),
+    title: "JavaScript",
+    level: "Solid",
+    icon: <FaJs className={iconClass} />,
+    text: "Interactive, dynamic web apps with smooth user interactions.",
+  },
+  {
+    id: nanoid(),
+    title: "HTML & CSS",
+    level: "Solid",
+    icon: <FaHtml5 className={iconClass} />,
+    text: "Responsive, accessible layouts that work on any screen.",
+  },
+  {
+    id: nanoid(),
+    title: "Python & MySQL",
+    level: "Working",
+    icon: <FaPython className={iconClass} />,
+    text: "Automation scripts, schema design and SQL queries, connected with mysql-connector-python.",
   },
 ];
 
@@ -62,39 +67,75 @@ export const projects = [
     img: storeshomescreen,
     url: "https://template-store-umber.vercel.app/",
     github: "https://github.com/yan00126",
+    kind: "Next.js · e-commerce",
     title: "A Simple Store",
-    text: "A NextJS based online shopping website ",
+    text: "An online shop with product browsing and a clear path to checkout.",
+    tags: ["Next.js", "React", "Vercel"],
   },
   {
     id: nanoid(),
     img: jobifyscreenshot,
     url: "https://jobify-b7oeh1fcd-fei-yans-projects.vercel.app/",
     github: "https://github.com/yan00126",
+    kind: "Next.js · dashboard",
     title: "Jobify",
-    text: "A NextJS based Job Application Tracking App",
+    text: "A job application tracker that keeps every application organized from saved to offer.",
+    tags: ["Next.js", "TypeScript", "Vercel"],
   },
   {
     id: nanoid(),
-    img: "https://plus.unsplash.com/premium_photo-1734112181063-4b2328276910?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1lYWwlMjBNYXRlfGVufDB8MHwwfHx8MA%3D%3D",
+    img: mealmate,
     url: "https://mealmate-felix-yan.vercel.app/",
     github: "https://github.com/yan00126",
+    kind: "Next.js · planner",
     title: "Meal Mate",
-    text: "Welcome to MealMate — your go-to companion for seamless meal planning and personalized recipe creation. ",
+    text: "Browse recipes, plan the week's meals and keep a personal recipe collection.",
+    tags: ["Next.js", "Supabase", "Tailwind CSS"],
   },
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
+    img: backroads,
     url: "https://felixyan-backroads.netlify.app/",
     github: "https://github.com/yan00126",
-    title: "mock travel site homepage backroads app",
-    text: "A mock homepage for travel agency website.",
+    kind: "HTML & CSS · landing page",
+    title: "Backroads",
+    text: "A mock homepage for a travel agency, built to practice layout and responsive design.",
+    tags: ["HTML", "CSS", "Netlify"],
   },
   {
     id: nanoid(),
-    img: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: picsearch,
     url: "https://unsplashfelix.netlify.app/",
     github: "https://github.com/yan00126",
-    title: "picture search",
-    text: "Search Pictures of anything from Unsplash, Cats, Dogs.",
+    kind: "React · API",
+    title: "Picture Search",
+    text: "Search Unsplash for pictures of anything, with a light and dark theme.",
+    tags: ["React", "Unsplash API", "Netlify"],
+  },
+];
+
+export const experiments = [
+  {
+    id: nanoid(),
+    status: "live",
+    title: "Chat with Fei",
+    text: "An assistant that answers questions about my skills, projects and how we could work together, built on a Hugging Face Space.",
+    tags: ["Chat", "Gradio", "Hugging Face"],
+    href: "#about",
+    cta: "Try it below",
+  },
+  {
+    id: nanoid(),
+    status: "planned",
+    title: "Job match for Jobify",
+    text: "Paste a job post and see which of the required skills match a résumé, with a short list of gaps.",
+    tags: ["Extraction", "Structured output"],
+  },
+  {
+    id: nanoid(),
+    status: "planned",
+    title: "Recipe remix for Meal Mate",
+    text: "Turn the ingredients you already have into a meal plan and a shopping list that skips them.",
+    tags: ["Generation", "Constraints"],
   },
 ];

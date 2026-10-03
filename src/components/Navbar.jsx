@@ -3,27 +3,24 @@ import { links } from "../data";
 
 const Navbar = () => {
   return (
-    <nav className="bg-emerald-100">
-      <div className="mx-auto max-w-7xl px-8 py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8">
-        <h2 className="text-3xl font-bold">
-          Web<span className="text-emerald-600">Dev</span>{" "}
-        </h2>
-        <div className="flex gap-x-3">
-          {links.map((link) => {
-            const { id, href, text } = link;
-            return (
-              <a
-                id={id}
-                href={href}
-                className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300"
-              >
-                {text}
-              </a>
-            );
-          })}
+    <header className="sticky top-0 z-10 border-b border-line bg-bg/85 backdrop-blur">
+      <nav className="align-element flex items-center justify-between gap-4 py-4">
+        <a href="#home" className="font-display text-xl font-extrabold">
+          Fei<span className="text-accent">.</span>dev
+        </a>
+        <div className="flex gap-x-4 text-sm font-medium sm:gap-x-6">
+          {links.map(({ id, href, text }) => (
+            <a
+              key={id}
+              href={href}
+              className="text-muted duration-200 hover:text-ink"
+            >
+              {text}
+            </a>
+          ))}
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
