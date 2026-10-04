@@ -41,16 +41,8 @@ const About = () => {
         </ul>
       </div>
 
-      <div id="chat" className="mt-14 rounded-3xl bg-ink p-5 text-bg sm:p-10">
-        <p className="label !text-bg/60">Fei's AI assistant</p>
-        <h3 className="mb-2 mt-2 text-3xl font-bold sm:text-4xl">Ask before you email.</h3>
-        <p className="mb-6 max-w-[40ch] text-bg/70">
-          Questions about my skills, projects or availability get an answer
-          right away.
-        </p>
-        <div className="overflow-hidden rounded-2xl bg-white">
-          <GradioEmbed src="https://felixpek-alterego.hf.space" minHeight={500} />
-        </div>
+      <div id="chat" className="mt-14">
+        <GradioEmbed src="https://felixpek-alterego.hf.space/?__theme=light" />
       </div>
     </section>
   );
