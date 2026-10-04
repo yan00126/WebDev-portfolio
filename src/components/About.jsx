@@ -3,7 +3,6 @@ import SectionTitle from "./SectionTitle";
 import GradioEmbed from "./GradioEmbed";
 
 const facts = [
-  ["School", "Algonquin College"],
   ["Focus", "Web apps, applied AI"],
   ["Based in", "Ottawa"],
 ];
@@ -14,7 +13,7 @@ const About = () => {
       <SectionTitle text="Code, coffee, running and fighting" />
       <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-12">
         <p className="max-w-[52ch] text-lg leading-relaxed text-muted">
-          I'm Fei Yan, a software engineering student at Algonquin College
+          I'm Fei Yan, a software engineering student
           focused on web development and internet applications. I'm interested
           in AI for what it does inside real products. Running and fighting
           taught me the same habit I use at the keyboard: show up, take the
