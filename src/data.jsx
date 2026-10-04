@@ -9,7 +9,6 @@ import picsearch from "@/assets/picsearch.webp";
 
 export const links = [
   { id: nanoid(), href: "#projects", text: "Work" },
-  { id: nanoid(), href: "#ai-lab", text: "AI Lab" },
   { id: nanoid(), href: "#skills", text: "Stack" },
   { id: nanoid(), href: "#about", text: "About" },
 ];
@@ -111,31 +110,5 @@ export const projects = [
     title: "Picture Search",
     text: "Search Unsplash for pictures of anything, with a light and dark theme.",
     tags: ["React", "Unsplash API", "Netlify"],
-  },
-];
-
-export const experiments = [
-  {
-    id: nanoid(),
-    status: "live",
-    title: "Chat with Fei",
-    text: "An assistant that answers questions about my skills, projects and how we could work together, built on a Hugging Face Space.",
-    tags: ["Chat", "Gradio", "Hugging Face"],
-    href: "#about",
-    cta: "Try it below",
-  },
-  {
-    id: nanoid(),
-    status: "planned",
-    title: "Job match for Jobify",
-    text: "Paste a job post and see which of the required skills match a résumé, with a short list of gaps.",
-    tags: ["Extraction", "Structured output"],
-  },
-  {
-    id: nanoid(),
-    status: "planned",
-    title: "Recipe remix for Meal Mate",
-    text: "Turn the ingredients you already have into a meal plan and a shopping list that skips them.",
-    tags: ["Generation", "Constraints"],
   },
 ];
