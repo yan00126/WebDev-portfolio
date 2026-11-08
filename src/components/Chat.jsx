@@ -4,12 +4,11 @@ import { FiArrowUpRight, FiMessageCircle, FiSend } from "react-icons/fi";
 
 const suggestions = ["What are your skills?", "Tell me about your projects", "How can we work together?"];
 
-export default function GradioEmbed({ src }) {
+export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
-  const client = useRef(null);
   const busy = useRef(false);
   const conversation = useRef(null);
   const inputRef = useRef(null);
@@ -26,20 +25,26 @@ export default function GradioEmbed({ src }) {
     setPending(true);
     setError("");
     setInput("");
+    const history = messages.slice(-12);
     setMessages((previous) => [...previous, { role: "user", content: message }]);
+    let failure = "The chat couldn’t connect. Please try sending your message again.";
     try {
-      if (!client.current) {
-        const { Client } = await import("@gradio/client");
-        client.current = await Client.connect(new URL(src).origin);
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message, history }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        if (typeof data.error === "string") failure = data.error;
+        throw new Error("request failed");
       }
-      const result = await client.current.predict("/chat", { message });
-      const reply = result.data?.[0];
-      if (typeof reply !== "string" || !reply.trim()) throw new Error("Empty response");
-      setMessages((previous) => [...previous, { role: "assistant", content: reply }]);
+      if (typeof data.reply !== "string" || !data.reply.trim()) throw new Error("empty response");
+      setMessages((previous) => [...previous, { role: "assistant", content: data.reply }]);
     } catch {
       setMessages((previous) => previous.slice(0, -1));
       setInput(message);
-      setError("The chat couldn’t connect. Please try sending your message again.");
+      setError(failure);
     } finally {
       busy.current = false;
       setPending(false);

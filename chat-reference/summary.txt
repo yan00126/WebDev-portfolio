@@ -1,0 +1,13 @@
+Fei Yan, also known professionally as Felix Yan, is a software engineer based in Ottawa, Ontario. Background updated October 3, 2026 from his September 24, 2026 resume and projects he identified directly.
+
+He has been a Software Engineer at Moguland Tech Solutions since March 2026. He builds business websites and web applications, with earlier experience supporting carrier networks during six years at Ericsson. He completed his Web Development and Internet Applications diploma at Algonquin College in December 2025; he is no longer a current student there. His Solace co-op ended in August 2025.
+
+Recent work includes creating mogulandtechsolutions.ca and yangtzeottawa.ca. His experience combines web development, client communication, troubleshooting, networking, and AI-assisted workflows.
+
+For current employment dates, education, and technical skills, use career.md. For these business website projects, use business-websites.md. Older project notes describe individual projects and should not override the current career timeline.
+
+Portfolio: https://yanfei.dev
+GitHub: https://github.com/yan00126
+Professional email: yanfei.bupt@gmail.com
+Languages: Chinese (native or bilingual), English (professional working proficiency).
+Personal interests: Muay Thai, outdoor running, cycling, food, movies, and television.

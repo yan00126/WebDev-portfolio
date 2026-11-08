@@ -332,3 +332,45 @@ export default ProjectsCard;
 #### Extra Challenge
 
 - setup projects in CMS
+
+
+#### AI chat (Netlify Function)
+
+The chat on the About section calls `POST /api/chat`, served by `netlify/functions/chat/`.
+The OpenAI key stays on the server.
+
+Environment variables (Netlify > Site configuration > Environment variables, scope: Functions):
+
+- `OPENAI_API_KEY` (required): use a dedicated OpenAI project key with a monthly budget limit.
+- `RATE_SALT` (recommended): any long random string. IPs are only stored as salted hashes.
+- `OPENAI_MODEL` (optional, default `gpt-4o-mini`).
+- `PUSHOVER_TOKEN`, `PUSHOVER_USER` (optional): notifications for contact requests and unanswered questions.
+
+What the assistant knows lives in `chat-reference/*.md|txt`. `npm run build` and `npm test`
+regenerate `netlify/functions/chat/reference.mjs` from it, so edit the source files, not the generated one.
+
+Limits (see `netlify/functions/chat/limits.mjs`): 5 questions/min and 20/day per visitor, 300/day overall,
+1,000 characters per message, 500 output tokens, at most 2 tool rounds.
+
+Local run with functions: `npx netlify dev` (plain `npm run dev` has no `/api/chat`).
+
+
+#### Testing and going live
+
+| Command | What it does |
+|---|---|
+| `npm test` | Unit and component tests (chat function, chat UI, project data, repo hygiene). No network, no OpenAI. |
+| `npm run verify` | Lint, tests and a production build. Run before every push. |
+| `npm run check:links` | Opens every project link and flags 4xx/5xx and login-wall redirects. Needs internet. |
+| `npm run smoke -- <url>` | Checks a deployed site: page, favicons, `/api/chat` guards and that `OPENAI_API_KEY` is set. Free. Add `--chat` to also ask one real question. |
+
+Automatic gates: GitHub Actions (`.github/workflows/ci.yml`) runs lint, tests and build on every pull request and on `main`.
+Netlify runs `npm test` before `npm run build` (`netlify.toml`), so a failing test stops the deploy and the last good version stays live.
+
+Before merging to `main`:
+
+1. `npm run verify` passes locally and CI is green on the pull request.
+2. `npm run check:links` passes (fix or hide any link it flags in `src/data.jsx`).
+3. Netlify has `OPENAI_API_KEY` (a dedicated project key with a monthly budget limit) and `RATE_SALT`.
+4. `npm run smoke -- <deploy-preview-url> --chat` passes on the deploy preview.
+5. Click through the preview once: chat answers, a rate-limit message appears after 5 quick questions, and the page looks right on a phone.

@@ -2,10 +2,10 @@ import React from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const log = [
-  ["Code", "Software engineering student at Algonquin College, focused on web and internet apps"],
+  ["Code", "Software engineer at Moguland Tech Solutions, building business websites and web apps"],
   ["Now", "Building with Next.js and exploring practical AI features"],
   ["Run", "Miles before the first commit"],
-  ["Fight", "Rounds that teach me to take feedback and keep going"],
+  ["Fight", "Muay Thai rounds that teach me to take feedback and keep going"],
 ];
 
 const Hero = () => {
@@ -46,10 +46,7 @@ const Hero = () => {
         aria-label="Quick facts"
         className="min-w-0 rounded-2xl border border-line bg-surface p-6"
       >
-        <p className="label mb-4 flex justify-between gap-4">
-          <span>Daily log</span>
-          <span>Algonquin College</span>
-        </p>
+        <p className="label mb-4">Daily log</p>
         <dl>
           {log.map(([k, v]) => (
             <div
