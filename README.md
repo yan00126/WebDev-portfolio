@@ -332,3 +332,24 @@ export default ProjectsCard;
 #### Extra Challenge
 
 - setup projects in CMS
+
+
+#### AI chat (Netlify Function)
+
+The chat on the About section calls `POST /api/chat`, served by `netlify/functions/chat/`.
+The OpenAI key stays on the server.
+
+Environment variables (Netlify > Site configuration > Environment variables, scope: Functions):
+
+- `OPENAI_API_KEY` (required): use a dedicated OpenAI project key with a monthly budget limit.
+- `RATE_SALT` (recommended): any long random string. IPs are only stored as salted hashes.
+- `OPENAI_MODEL` (optional, default `gpt-4o-mini`).
+- `PUSHOVER_TOKEN`, `PUSHOVER_USER` (optional): notifications for contact requests and unanswered questions.
+
+What the assistant knows lives in `chat-reference/*.md|txt`. `npm run build` and `npm test`
+regenerate `netlify/functions/chat/reference.mjs` from it, so edit the source files, not the generated one.
+
+Limits (see `netlify/functions/chat/limits.mjs`): 5 questions/min and 20/day per visitor, 300/day overall,
+1,000 characters per message, 500 output tokens, at most 2 tool rounds.
+
+Local run with functions: `npx netlify dev` (plain `npm run dev` has no `/api/chat`). Tests: `npm test`.

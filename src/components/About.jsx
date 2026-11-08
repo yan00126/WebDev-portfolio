@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
-import GradioEmbed from "./GradioEmbed";
+import Chat from "./Chat";
 
 const facts = [
   ["Focus", "Web apps, applied AI"],
@@ -41,7 +41,7 @@ const About = () => {
       </div>
 
       <div id="chat" className="mt-14">
-        <GradioEmbed src="https://felixpek-alterego.hf.space/?__theme=light" />
+        <Chat />
       </div>
     </section>
   );
