@@ -30,9 +30,11 @@ export function memoryStore() {
 }
 
 // Adapts a Netlify Blobs store to the small interface used below.
+// Reads must be strongly consistent: Blobs is eventually consistent by default
+// (reads can lag up to 60s), which would hide the counters we just wrote.
 export function blobsStore(store) {
   return {
-    get: (key) => store.get(key, { type: "json" }),
+    get: (key) => store.get(key, { type: "json", consistency: "strong" }),
     setJSON: (key, value) => store.setJSON(key, value),
   };
 }

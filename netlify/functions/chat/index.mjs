@@ -216,7 +216,7 @@ async function askModel(deps, messages) {
 let fallbackStore;
 function limitStore() {
   try {
-    return blobsStore(getStore({ name: "chat-limits" }));
+    return blobsStore(getStore({ name: "chat-limits", consistency: "strong" }));
   } catch (error) {
     // Outside Netlify (local node, tests) counters live in memory per instance.
     console.warn("blobs unavailable, using in-memory limits");
