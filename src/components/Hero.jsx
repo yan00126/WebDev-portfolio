@@ -2,10 +2,10 @@ import React from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const log = [
-  ["Code", "Software engineering student, focused on web and internet apps"],
+  ["Code", "Software engineer at Moguland Tech Solutions, building business websites and web apps"],
   ["Now", "Building with Next.js and exploring practical AI features"],
   ["Run", "Miles before the first commit"],
-  ["Fight", "Rounds that teach me to take feedback and keep going"],
+  ["Fight", "Muay Thai rounds that teach me to take feedback and keep going"],
 ];
 
 const Hero = () => {

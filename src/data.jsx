@@ -4,8 +4,8 @@ import { SiNextdotjs, SiMysql, SiTypescript } from "react-icons/si";
 import jobifyscreenshot from "@/assets/jobifyscreenshot.webp";
 import storeshomescreen from "@/assets/storeshomescreen.webp";
 import mealmate from "@/assets/mealmate.webp";
-import backroads from "@/assets/backroads.webp";
-import picsearch from "@/assets/picsearch.webp";
+import moguland from "@/assets/moguland.webp";
+import yangtze from "@/assets/yangtze.webp";
 
 export const links = [
   { id: nanoid(), href: "#projects", text: "Work" },
@@ -60,55 +60,74 @@ export const skills = [
   },
 ];
 
+// Client work and the strongest apps get a full row with a screenshot.
+// `compact: true` items are listed in a smaller "more" list without a screenshot.
+// Leave `url` or `github` empty to hide that link (e.g. private repos, demos being fixed).
 export const projects = [
   {
     id: nanoid(),
-    img: storeshomescreen,
-    url: "https://template-store-umber.vercel.app/",
-    github: "https://github.com/yan00126",
-    kind: "Next.js · e-commerce",
-    title: "A Simple Store",
-    text: "An online shop with product browsing and a clear path to checkout.",
-    tags: ["Next.js", "React", "Vercel"],
+    img: moguland,
+    url: "https://mogulandtechsolutions.ca",
+    github: "",
+    kind: "WordPress · client work",
+    title: "Moguland Tech Solutions",
+    text: "Company website for an Ottawa home and business security provider. Trilingual in English, French and Simplified Chinese, built on a custom WordPress theme and tested locally before each release.",
+    tags: ["WordPress", "Custom theme", "Git", "LocalWP"],
+  },
+  {
+    id: nanoid(),
+    img: yangtze,
+    url: "https://yangtzeottawa.ca",
+    github: "",
+    kind: "Next.js · client work",
+    title: "YangTze Ottawa",
+    text: "Responsive English and Chinese website for an Ottawa Chinese restaurant, with the restaurant story and careers and contact pages. It currently announces the restaurant's return to Chinatown.",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Sanity"],
   },
   {
     id: nanoid(),
     img: jobifyscreenshot,
-    url: "https://jobify-b7oeh1fcd-fei-yans-projects.vercel.app/",
-    github: "https://github.com/yan00126",
+    url: "https://jobify-lovat.vercel.app",
+    github: "https://github.com/yan00126/Jobify",
     kind: "Next.js · dashboard",
     title: "Jobify",
-    text: "A job application tracker that keeps every application organized from saved to offer.",
-    tags: ["Next.js", "TypeScript", "Vercel"],
+    text: "A job application tracker that keeps every application organized from saved to offer, with status filters and stats.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Clerk"],
   },
   {
     id: nanoid(),
     img: mealmate,
     url: "https://mealmate-felix-yan.vercel.app/",
-    github: "https://github.com/yan00126",
+    github: "https://github.com/yan00126/Meal-Mate",
     kind: "Next.js · planner",
     title: "Meal Mate",
-    text: "Browse recipes, plan the week's meals and keep a personal recipe collection.",
-    tags: ["Next.js", "Supabase", "Tailwind CSS"],
+    text: "Discover recipes, save them to a personal collection and plan the week's meals.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Prisma"],
   },
   {
     id: nanoid(),
-    img: backroads,
+    img: storeshomescreen,
+    url: "",
+    github: "https://github.com/yan00126/template-store",
+    kind: "Next.js · e-commerce",
+    title: "A Simple Store",
+    text: "An online shop with product browsing and a clear path to checkout.",
+    tags: ["Next.js", "TypeScript"],
+  },
+  {
+    id: nanoid(),
+    compact: true,
     url: "https://felixyan-backroads.netlify.app/",
-    github: "https://github.com/yan00126",
-    kind: "HTML & CSS · landing page",
+    github: "https://github.com/yan00126/backroads-app",
     title: "Backroads",
-    text: "A mock homepage for a travel agency, built to practice layout and responsive design.",
-    tags: ["HTML", "CSS", "Netlify"],
+    text: "A mock travel agency homepage in HTML, CSS and JavaScript.",
   },
   {
     id: nanoid(),
-    img: picsearch,
+    compact: true,
     url: "https://unsplashfelix.netlify.app/",
-    github: "https://github.com/yan00126",
-    kind: "React · API",
+    github: "https://github.com/yan00126/Netli-Unsplash",
     title: "Picture Search",
-    text: "Search Unsplash for pictures of anything, with a light and dark theme.",
-    tags: ["React", "Unsplash API", "Netlify"],
+    text: "Search Unsplash for pictures of anything, with light and dark themes.",
   },
 ];
