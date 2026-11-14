@@ -1,6 +1,4 @@
 import { nanoid } from "nanoid";
-import jobifyscreenshot from "@/assets/jobifyscreenshot.webp";
-import storeshomescreen from "@/assets/storeshomescreen.webp";
 import mealmate from "@/assets/mealmate.webp";
 import moguland from "@/assets/moguland.webp";
 import yangtze from "@/assets/yangtze.webp";
@@ -46,16 +44,6 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: jobifyscreenshot,
-    url: "https://jobify-lovat.vercel.app",
-    github: "https://github.com/yan00126/Jobify",
-    kind: "Next.js · dashboard",
-    title: "Jobify",
-    text: "A job application tracker that keeps every application organized from saved to offer, with status filters and stats.",
-    tags: ["Next.js", "TypeScript", "Prisma", "Clerk"],
-  },
-  {
-    id: nanoid(),
     img: mealmate,
     url: "https://mealmate-felix-yan.vercel.app/",
     github: "https://github.com/yan00126/Meal-Mate",
@@ -66,13 +54,27 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: storeshomescreen,
+    compact: true,
     url: "",
-    github: "https://github.com/yan00126/template-store",
-    kind: "Next.js · e-commerce",
-    title: "A Simple Store",
-    text: "An online shop with product browsing and a clear path to checkout.",
-    tags: ["Next.js", "TypeScript"],
+    github: "https://github.com/yan00126/Je-Ne-Sais-Quiz",
+    title: "Je Ne Sais Quiz",
+    text: "An iPhone app (React Native, TypeScript) with a daily plan for TCF Canada French exam prep: listening, reading, writing and speaking practice, plus spaced-repetition vocabulary.",
+  },
+  {
+    id: nanoid(),
+    compact: true,
+    url: "https://yanfei.dev",
+    github: "https://github.com/yan00126/WebDev-portfolio",
+    title: "This site",
+    text: "React and Tailwind, with a server-side AI assistant on a Netlify Function: rate limited, tested, and gated by CI before every deploy.",
+  },
+  {
+    id: nanoid(),
+    compact: true,
+    url: "https://jobify-lovat.vercel.app",
+    github: "https://github.com/yan00126/Jobify",
+    title: "Jobify",
+    text: "A job application tracker in Next.js with status filters and stats.",
   },
   {
     id: nanoid(),
