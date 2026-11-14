@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid";
-import mealmate from "@/assets/mealmate.webp";
 import moguland from "@/assets/moguland.webp";
 import yangtze from "@/assets/yangtze.webp";
 
@@ -41,16 +40,6 @@ export const projects = [
     title: "YangTze Ottawa",
     text: "Responsive English and Chinese website for an Ottawa Chinese restaurant, with the restaurant story and careers and contact pages. It currently announces the restaurant's return to Chinatown.",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Sanity"],
-  },
-  {
-    id: nanoid(),
-    img: mealmate,
-    url: "https://mealmate-felix-yan.vercel.app/",
-    github: "https://github.com/yan00126/Meal-Mate",
-    kind: "Next.js · planner",
-    title: "Meal Mate",
-    text: "Discover recipes, save them to a personal collection and plan the week's meals.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Prisma"],
   },
   {
     id: nanoid(),

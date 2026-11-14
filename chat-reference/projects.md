@@ -1,6 +1,6 @@
 # Fei's projects (as shown on yanfei.dev)
 
-Featured: Moguland Tech Solutions and YangTze Ottawa (client work, see business-websites.md), and Meal Mate (see MealMate.md).
+Featured: Moguland Tech Solutions and YangTze Ottawa (client work, see business-websites.md).
 
 More projects:
 - Je Ne Sais Quiz: an iPhone app (React Native, TypeScript) for preparing the TCF Canada French exam, from early B1 toward B2. It gives a daily plan covering listening, reading, writing and speaking, with spaced-repetition vocabulary review (FSRS) and a mistake log. Data is stored on the phone. Source: https://github.com/yan00126/Je-Ne-Sais-Quiz
