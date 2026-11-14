@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { links, projects, skills } from "../src/data.jsx";
+import { alsoUsed, links, projects, skillGroups } from "../src/data.jsx";
 
 describe("projects", () => {
   it("have the required fields", () => {
@@ -37,11 +37,23 @@ describe("projects", () => {
   });
 });
 
-describe("skills and navigation", () => {
-  it("skills have a known level", () => {
-    for (const s of skills) expect(["Daily", "Solid", "Working"]).toContain(s.level);
+describe("tech stack", () => {
+  it("stays short: at most 5 items per row and 14 in total", () => {
+    for (const g of skillGroups) {
+      expect(g.items.length, g.label).toBeGreaterThan(0);
+      expect(g.items.length, g.label).toBeLessThanOrEqual(5);
+    }
+    expect(skillGroups.flatMap((g) => g.items).length).toBeLessThanOrEqual(14);
+    expect(alsoUsed.length).toBeLessThanOrEqual(5);
   });
 
+  it("lists nothing twice", () => {
+    const all = [...skillGroups.flatMap((g) => g.items), ...alsoUsed].map((x) => x.toLowerCase());
+    expect(new Set(all).size).toBe(all.length);
+  });
+});
+
+describe("navigation", () => {
   it("every nav link targets a section that exists", () => {
     const sections = ["home", "projects", "skills", "about"];
     for (const l of links) expect(sections).toContain(l.href.replace("#", ""));
