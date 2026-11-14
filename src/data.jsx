@@ -1,6 +1,4 @@
 import { nanoid } from "nanoid";
-import { FaHtml5, FaJs, FaReact, FaPython } from "react-icons/fa";
-import { SiNextdotjs, SiMysql, SiTypescript } from "react-icons/si";
 import jobifyscreenshot from "@/assets/jobifyscreenshot.webp";
 import storeshomescreen from "@/assets/storeshomescreen.webp";
 import mealmate from "@/assets/mealmate.webp";
@@ -13,52 +11,14 @@ export const links = [
   { id: nanoid(), href: "#about", text: "About" },
 ];
 
-const iconClass = "h-8 w-8 text-accent";
-
-export const skills = [
-  {
-    id: nanoid(),
-    title: "Next.js",
-    level: "Daily",
-    icon: <SiNextdotjs className={iconClass} />,
-    text: "Server-side rendering, routing and API routes for fast, maintainable apps.",
-  },
-  {
-    id: nanoid(),
-    title: "React",
-    level: "Daily",
-    icon: <FaReact className={iconClass} />,
-    text: "Component-based front ends with a focus on clean, reusable structure.",
-  },
-  {
-    id: nanoid(),
-    title: "TypeScript",
-    level: "Daily",
-    icon: <SiTypescript className={iconClass} />,
-    text: "Static types on top of JavaScript to catch mistakes early.",
-  },
-  {
-    id: nanoid(),
-    title: "JavaScript",
-    level: "Solid",
-    icon: <FaJs className={iconClass} />,
-    text: "Interactive, dynamic web apps with smooth user interactions.",
-  },
-  {
-    id: nanoid(),
-    title: "HTML & CSS",
-    level: "Solid",
-    icon: <FaHtml5 className={iconClass} />,
-    text: "Responsive, accessible layouts that work on any screen.",
-  },
-  {
-    id: nanoid(),
-    title: "Python & MySQL",
-    level: "Working",
-    icon: <FaPython className={iconClass} />,
-    text: "Automation scripts, schema design and SQL queries, connected with mysql-connector-python.",
-  },
+// Keep this short: a few things per row, each one backed by a project or client site.
+export const skillGroups = [
+  { id: nanoid(), label: "Front end", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Native"] },
+  { id: nanoid(), label: "Back end & content", items: ["PostgreSQL", "Prisma", "WordPress", "Sanity"] },
+  { id: nanoid(), label: "AI & workflow", items: ["OpenAI & Claude APIs", "MCP", "GitHub Actions", "Vitest"] },
 ];
+
+export const alsoUsed = ["Python", "Docker", "AWS", "SQL"];
 
 // Client work and the strongest apps get a full row with a screenshot.
 // `compact: true` items are listed in a smaller "more" list without a screenshot.
