@@ -1,14 +1,24 @@
 const ProjectsCard = ({ url, img, phone, github, kind, title, text, tags }) => {
-  const shot = phone ? (
-    <div className="flex justify-center bg-surface px-6 py-8">
-      <img
-        src={img}
-        alt={`${title} app home screen`}
-        loading="lazy"
-        className="aspect-[1170/2532] w-[220px] rounded-[1.75rem] border border-line object-cover shadow-sm"
-      />
+  const device = (
+    <div className="relative mx-auto w-[250px]">
+      <i className="absolute -left-[3px] top-[88px] h-7 w-[3px] rounded-l bg-[#2a2a2c]" />
+      <i className="absolute -left-[3px] top-[132px] h-12 w-[3px] rounded-l bg-[#2a2a2c]" />
+      <i className="absolute -left-[3px] top-[190px] h-12 w-[3px] rounded-l bg-[#2a2a2c]" />
+      <i className="absolute -right-[3px] top-[148px] h-16 w-[3px] rounded-r bg-[#2a2a2c]" />
+      <div className="rounded-[2.9rem] border-2 border-[#3a3a3d] bg-black p-[7px] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.45)]">
+        <div className="relative overflow-hidden rounded-[2.35rem] bg-[#faf7ff] pt-[38px]">
+          <i className="absolute left-1/2 top-[10px] h-[22px] w-[76px] -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src={img}
+            alt={`${title} app home screen`}
+            loading="lazy"
+            className="block aspect-[1170/2532] w-full object-cover object-top"
+          />
+        </div>
+      </div>
     </div>
-  ) : (
+  );
+  const shot = (
     <>
       <div className="flex h-6 items-center gap-1.5 border-b border-line px-3">
         <i className="h-2 w-2 rounded-full bg-line" />
@@ -27,7 +37,9 @@ const ProjectsCard = ({ url, img, phone, github, kind, title, text, tags }) => {
 
   return (
     <article className="group grid items-center gap-6 py-8 md:grid-cols-2 md:gap-10">
-      {url ? (
+      {phone ? (
+        <div className="md:group-even:order-2">{device}</div>
+      ) : url ? (
         <a href={url} className={frame} aria-label={`Open ${title}`}>
           {shot}
         </a>
