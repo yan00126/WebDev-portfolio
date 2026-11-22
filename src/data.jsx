@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import jensaisquiz from "@/assets/jensaisquiz.webp";
 import moguland from "@/assets/moguland.webp";
 import yangtze from "@/assets/yangtze.webp";
 
@@ -43,11 +44,14 @@ export const projects = [
   },
   {
     id: nanoid(),
-    compact: true,
+    img: jensaisquiz,
+    phone: true,
     url: "",
     github: "https://github.com/yan00126/Je-Ne-Sais-Quiz",
+    kind: "React Native · iPhone app",
     title: "Je Ne Sais Quiz",
-    text: "An iPhone app (React Native, TypeScript) with a daily plan for TCF Canada French exam prep: listening, reading, writing and speaking practice, plus spaced-repetition vocabulary.",
+    text: "A daily French study plan for the TCF Canada exam. It covers listening, reading, writing and speaking, reviews vocabulary with spaced repetition and keeps a log of mistakes. Everything is stored on the phone.",
+    tags: ["React Native", "Expo", "TypeScript", "SQLite"],
   },
   {
     id: nanoid(),

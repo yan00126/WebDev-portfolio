@@ -1,5 +1,14 @@
-const ProjectsCard = ({ url, img, github, kind, title, text, tags }) => {
-  const shot = (
+const ProjectsCard = ({ url, img, phone, github, kind, title, text, tags }) => {
+  const shot = phone ? (
+    <div className="flex justify-center bg-surface px-6 py-8">
+      <img
+        src={img}
+        alt={`${title} app home screen`}
+        loading="lazy"
+        className="aspect-[1170/2532] w-[220px] rounded-[1.75rem] border border-line object-cover shadow-sm"
+      />
+    </div>
+  ) : (
     <>
       <div className="flex h-6 items-center gap-1.5 border-b border-line px-3">
         <i className="h-2 w-2 rounded-full bg-line" />
