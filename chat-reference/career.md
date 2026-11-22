@@ -34,6 +34,9 @@ April 2011–October 2017
 - M.Sc., Physical Electronics, Beijing University of Posts and Telecommunications, September 2008–April 2011.
 - B.Eng., Electronic Information Engineering, Chongqing University, September 2001–June 2005.
 
+## Languages
+- English and Chinese.
+
 ## Skills documented in the resume
 - Languages: Python, Java, TypeScript, JavaScript, C#, SQL, Bash.
 - Infrastructure and cloud: Linux, Docker, AWS (Lambda, ECS, API Gateway, S3, CloudFormation), Git.

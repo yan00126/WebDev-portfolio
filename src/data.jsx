@@ -1,7 +1,5 @@
 import { nanoid } from "nanoid";
-import jobifyscreenshot from "@/assets/jobifyscreenshot.webp";
-import storeshomescreen from "@/assets/storeshomescreen.webp";
-import mealmate from "@/assets/mealmate.webp";
+import jensaisquiz from "@/assets/jensaisquiz.webp";
 import moguland from "@/assets/moguland.webp";
 import yangtze from "@/assets/yangtze.webp";
 
@@ -46,33 +44,30 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: jobifyscreenshot,
+    img: jensaisquiz,
+    phone: true,
+    url: "",
+    github: "https://github.com/yan00126/Je-Ne-Sais-Quiz",
+    kind: "React Native · iPhone app",
+    title: "Je Ne Sais Quiz",
+    text: "A daily French study plan for the TCF Canada exam. It covers listening, reading, writing and speaking, reviews vocabulary with spaced repetition and keeps a log of mistakes. Everything is stored on the phone.",
+    tags: ["React Native", "Expo", "TypeScript", "SQLite"],
+  },
+  {
+    id: nanoid(),
+    compact: true,
+    url: "https://yanfei.dev",
+    github: "https://github.com/yan00126/WebDev-portfolio",
+    title: "This site",
+    text: "React and Tailwind, with a server-side AI assistant on a Netlify Function: rate limited, tested, and gated by CI before every deploy.",
+  },
+  {
+    id: nanoid(),
+    compact: true,
     url: "https://jobify-lovat.vercel.app",
     github: "https://github.com/yan00126/Jobify",
-    kind: "Next.js · dashboard",
     title: "Jobify",
-    text: "A job application tracker that keeps every application organized from saved to offer, with status filters and stats.",
-    tags: ["Next.js", "TypeScript", "Prisma", "Clerk"],
-  },
-  {
-    id: nanoid(),
-    img: mealmate,
-    url: "https://mealmate-felix-yan.vercel.app/",
-    github: "https://github.com/yan00126/Meal-Mate",
-    kind: "Next.js · planner",
-    title: "Meal Mate",
-    text: "Discover recipes, save them to a personal collection and plan the week's meals.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Prisma"],
-  },
-  {
-    id: nanoid(),
-    img: storeshomescreen,
-    url: "",
-    github: "https://github.com/yan00126/template-store",
-    kind: "Next.js · e-commerce",
-    title: "A Simple Store",
-    text: "An online shop with product browsing and a clear path to checkout.",
-    tags: ["Next.js", "TypeScript"],
+    text: "A job application tracker in Next.js with status filters and stats.",
   },
   {
     id: nanoid(),
